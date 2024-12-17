@@ -10,7 +10,7 @@ const Protected = ({ compo }) => {
     const { error } = useGotoDashQuery()
 
     useEffect(() => {
-        if (error && error.status == 431 || 401) {
+        if (error && error.status == 431) {
             logout()
         }
     }, [error])
